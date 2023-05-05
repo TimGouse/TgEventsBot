@@ -242,7 +242,7 @@ public class EventBot
             foreach (var eventDetails in events)
             {
                 messageBuilder.AppendLine($"ID события: {eventDetails.Id}");
-                messageBuilder.AppendLine($"Название: {eventDetails.Name}");
+                messageBuilder.AppendLine($"Название: {eventDetails.Name.Replace("&quot;", "").Replace("&amp;", "").Replace("quot;", "")}");
                 messageBuilder.AppendLine($"URL: {eventDetails.Url}");
                 messageBuilder.AppendLine();
             }
