@@ -78,7 +78,6 @@ public class EventBot
                         await SendAvailableCommandsAsync(callbackQuery.Message.Chat.Id);
                     }
 
-                    // Отправьте ответ на обратный вызов, чтобы убрать "часы" на кнопке
                     await _bot.AnswerCallbackQueryAsync(callbackQuery.Id);
                 }
 
